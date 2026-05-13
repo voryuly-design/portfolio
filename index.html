@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Motion Portfolio</title>
+
+<style>
+
+/* ===== BASE ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+
+body{
+  background:#04060d;
+  color:#e6f0ff;
+  line-height:1.6;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+section{
+  padding:120px 0; /* больше воздуха */
+}
+
+/* ===== NAV ===== */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:30px 0;
+}
+
+.logo{color:#9cc4ff;letter-spacing:2px;}
+
+nav a{
+  margin-left:25px;
+  color:#cfe3ff;
+  text-decoration:none;
+  opacity:0.7;
+}
+nav a:hover{opacity:1;color:#5bb3ff;}
+
+/* ===== HERO ===== */
+.hero h1{
+  font-size:90px;
+  line-height:1.05;
+}
+.hero h1 span{color:#5bb3ff;}
+.hero p{
+  margin-top:25px;
+  max-width:520px;
+  opacity:0.7;
+}
+
+/* ===== MARQUEE ===== */
+.marquee{
+  border-top:1px solid rgba(120,160,255,0.15);
+  border-bottom:1px solid rgba(120,160,255,0.15);
+  overflow:hidden;
+  white-space:nowrap;
+  padding:20px 0;
+}
+
+.marquee span {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color:#8fbfff;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== SKILLS ===== */
+.skills{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+}
+
+.skills-left h2{
+  font-size:64px;
+  line-height:1.1;
+}
+
+.skills-left span{color:#5bb3ff;}
+
+.skills-right p{
+  opacity:0.75;
+  margin-bottom:30px;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.tag{
+  padding:12px 18px;
+  border-radius:30px;
+  border:1px solid rgba(120,160,255,0.2);
+  background:rgba(255,255,255,0.03);
+  font-size:14px;
+}
+
+.stats{
+  display:flex;
+  gap:80px;
+  margin-top:50px;
+}
+
+.stat h3{font-size:36px;}
+.stat p{font-size:12px;opacity:0.6;letter-spacing:2px;}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
+}
+#black {
+  color:#04060d
+}
+#bb {
+  color:#04060d
+}
+.card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(120,160,255,0.15);
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  min-height:340px;
+}
+
+.card.large{grid-row:span 2;}
+.card {
+  cursor: pointer;
+}
+.card img,
+.card video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card-content{
+  position:absolute;
+  bottom:25px;
+  left:25px;
+}
+
+.card-content h3{
+  font-size:26px;
+}
+.card video {
+  filter: brightness(0.8);
+  transition: 0.4s;
+}
+
+.card:hover video {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+.card-content small{
+  font-size:12px;
+  opacity:0.7;
+}
+
+/* ===== EXTRA SECTION (чтобы сайт был длиннее) ===== */
+.extra{
+  max-width:700px;
+}
+
+.extra p{
+  opacity:0.7;
+  margin-top:20px;
+}
+
+/* ===== CONTACT ===== */
+.contact-box{
+  padding:40px;
+  border-radius:22px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(120,160,255,0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .skills{grid-template-columns:1fr;}
+  .grid{grid-template-columns:1fr;}
+  .hero h1{font-size:52px;}
+}
+footer{
+  margin-top:120px;
+  padding:40px 0;
+  border-top:1px solid rgba(120,160,255,0.15);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  font-size:14px;
+  opacity:0.6;
+}
+
+  
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- NAV -->
+<nav>
+  <div class="logo">YULIIA VOROBIOVA</div>
+  <div>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Designing frames<br>that <span>breathe</span></h1>
+  <p>Beginner motion designer and Creative Digital Media student at MTU(Munster Technological University) Ireland, 
+focused on animation, visual storytelling and motion design.</p>
+</section>
+
+<!-- MARQUEE 1 -->
+<div class="marquee">
+  <span>LOOPING ANIMATION  •  3D MOTION  •  TITLE SEQUENCES  •  ILLUSTRATION  •  SOUND•IMAGE  •  KINETIC TYPOGRAPHY  •  LOOPING ANIMATION  •  3D MOTION  •  TITLE SEQUENCES  •  ILLUSTRATION  •  SOUND•IMAGE  •  KINETIC TYPOGRAPHY  •  LOOPING ANIMATION  •  3D MOTION  •  TITLE SEQUENCES  •  ILLUSTRATION  •  SOUND•IMAGE  •  KINETIC TYPOGRAPHY</span>
+</div>
+
+<!-- SKILLS -->
+<section class="skills" id="about">
+
+  <div class="skills-left">
+    <h2>A student in love<br>with the <span>in-between</span> frames.</h2>
+  </div>
+
+  <div class="skills-right">
+    <p>
+      I am currently studying motion design and exploring animation, storytelling and 3D.
+    </p>
+
+    <div class="tags">
+      <div class="tag">After Effects</div>
+      <div class="tag">Blender</div>
+      <div class="tag">Figma</div>
+      <div class="tag">Illustrator</div>
+      <div class="tag">Premiere Pro</div>
+      <div class="tag">Photoshop</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><h3>01</h3><p>YEARS</p></div>
+      <div class="stat"><h3>10k+</h3><p>FRAMES</p></div>
+      <div class="stat"><h3>∞</h3><p>IDEAS</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MARQUEE 2 -->
+<div class="marquee">
+  <span></span>
+</div>
+
+<!-- WORK GRID -->
+<section id="work">
+
+  <div class="grid">
+
+    <!-- BIG CARD -->
+    <div class="card large">
+      <!-- VIDEO OR IMAGE -->
+     <video src="main_1.mp4" autoplay muted loop></video>
+      
+      <div class="card-content">
+        <small id="black">Typography Motion</small>
+        <h3 id="bb">Motion</h3>
+      </div>
+    </div>
+
+    <!-- SMALL CARD 1 -->
+    <div class="card">
+      <video src="EX3_1.mp4" autoplay muted loop></video>
+      <div class="card-content">
+        <small>3D Animation</small>
+        <h3>Blender Exploring</h3>
+      </div>
+    </div>
+
+    <!-- SMALL CARD 2 -->
+    <div class="card">
+       <video src="main_3.mp4" autoplay muted loop></video>
+      <div class="card-content">
+        <small>UI Morph</small>
+        <h3>Loop Animation</h3>
+      </div>
+    </div>
+
+    <!-- NEW VIDEO CARD 1 -->
+    <div class="card">
+      <!-- VIDEO HERE -->
+        <video src="doc_2026-05-09_19-02-28.mp4" autoplay muted loop></video>
+      <div class="card-content">
+        <small >Comercial Video</small>
+        <h3>Project Video 1</h3>
+      </div>
+    </div>
+
+    <!-- NEW VIDEO CARD 2 -->
+    <div class="card">
+      <video src="maincomp.mp4" autoplay muted loop></video>
+      YOUR VIDEO HERE
+      <div class="card-content">
+        <small>Comercial Promo</small>
+        <h3>Product Advertising </h3>
+      </div>
+    </div>
+
+ <!-- NEW VIDEO CARD 2 -->
+    <div class="card">
+      <video src="MAINCOMP_1.mp4" autoplay muted loop></video>
+      YOUR VIDEO HERE
+      <div class="card-content">
+        <small  id="black">UI Motion</small>
+        <h3 id="bb">Project Video 2</h3>
+      </div>
+    </div>
+
+ <!-- NEW VIDEO CARD 2 -->
+    <div class="card">
+    <video src="RENDER.mp4" autoplay muted loop></video>
+      YOUR VIDEO HERE
+      <div class="card-content">
+        <small ></small>
+        <h3 >Logo Animation</h3>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div style="max-width:900px;">
+
+    <small style="color:#7fb7ff;letter-spacing:3px;">CONTACT</small>
+
+    <h1 style="font-size:70px;line-height:1.1;margin-top:20px;">
+      Let’s build <br>
+      <span style="color:#5bb3ff;">something cool.</span>
+    </h1>
+
+    <p style="margin-top:25px;opacity:0.7;max-width:500px;">
+      Available for internships, junior and trainee roles or short collaborations Now!
+    </p>
+
+    <div style="margin-top:60px;border-top:1px solid rgba(120,160,255,0.2);padding-top:30px;">
+      <small style="letter-spacing:3px;opacity:0.6;">EMAIL</small>
+      <div style="font-size:22px;margin-top:10px;display:flex;justify-content:space-between;align-items:center;">
+        <a href="mailto:voryuly@gmail.com" style="
+  color:#e6f0ff;
+  text-decoration:none;
+  transition:0.3s;
+" onmouseover="this.style.color='#5bb3ff'" 
+  onmouseout="this.style.color='#e6f0ff'">
+  voryuly@gmail.com
+</a>
+        <span style="opacity:0.6;">↗</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+<div style="cursor:pointer;" 
+onmouseover="this.style.opacity='1'" 
+onmouseout="this.style.opacity='0.6'">
+  © 2026 Yuliia Vorobiova. All rights reserved.
+</div>
+</footer>
+</div>
+<div id="videoModal" style="
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+">
+  <video id="modalVideo" controls style="max-width:90%; max-height:90%;"></video>
+  <script>
+const cards = document.querySelectorAll('.card video');
+const modal = document.getElementById('videoModal');
+const modalVideo = document.getElementById('modalVideo');
+
+cards.forEach(video => {
+  video.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalVideo.src = video.src;
+    modalVideo.play();
+  });
+});
+
+modal.addEventListener('click', () => {
+  modal.style.display = 'none';
+  modalVideo.pause();
+});
+</script>
+</div>
+</body>
+</html>
